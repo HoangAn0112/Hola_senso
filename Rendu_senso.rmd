@@ -1,0 +1,204 @@
+---
+title: "Donnees_perception"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("~/Agro/5A/Statistique de donnees de perception")
+library(FactoMineR)
+```
+
+#### Introduction aux données de perception
+
+## Réflexion sur les statistiques appliquées 
+
+Les statistiques appliquées prennent en compte du sens physique des données dans l’analyse.
+Il existe une différence entre "Statistiques appliquées à la perception des données" et "Analyse des données de perception senso-conso" : les statistiques appliquées ne correspondent pas qu’à l’analyse des données, elles prennent également en compte l’acquisition des données et la restitution des résultats. L’analyse comprend la construction des tableaux de données, la réflexion sur la nature des individus statistiques, la visualisation et le traitement statistique. 
+
+En sensométrie, ce que nous mesurons peut avoir deux points de vue : hédonique – descriptif. Il faut toujours s’intéresser à la nature de ce qu’on mesure. De plus, la description du produit peut être faite de deux façons : en contraignant le consommateur (regard des produits à travers un prisme fixe) ou en le laissant libre (regard des produits à travers ses propres critères, sans grille de lecture à priori). 
+
+Quand le cosommateur est contraint, le point de vue par rapport auquel il regarde les produits est fixé par l’expérimentateur : il n’y a pas forcément d’adéquation entre ce point de vue et le point de vue des consommateurs. En ce sens, le contraint ne mesure pas directement ce que voit le consommateur. Il est facile de traiter les données quand les consommateurs sont contraints. Exemples : QDA, JAR...
+Le libre est particulièrement intéressant quand les produits ont une forte valeur ajoutée (parfums, voitures de luxe, etc). Exemples : tri libre, tâche de verbalisation libre...
+
+#### Les différents types recueil
+
+##JAR
+La méthode JAR propose le plus souvent 5 degrés de satisfaction :
+
+* 1) Pas du tout assez
+* 2) Pas assez
+* 3) Juste bien
+* 4) Trop
+* 5) Beaucoup trop
+
+La mesure JAR est donc une mesure qui mélange caractérisation et jugement hédonique : il s'agit d'une mesure descriptive teintée d’hédonique. Pour résumer, la mesure JAR est contrainte et correspond à un mélange entre descriptif et hédonique. La méthode JAR présente une double difficulté : une difficulté dans l'interprétation de la mesure et une difficulté dans le traitement des données (effet propre au produit ou propre à l'espace produit ?)
+
+Il existe également le Free JAR : le consommateur est libre dans un espace contraint afin d’exprimer les qualités et défauts d’un produit sans aller trop loin dans son expression. 
+
+## Mapping - Projective Mapping
+
+Quelle est la différence entre projective mapping et mapping ? 
+
+Dans tous les cas, ces tâches sont projectives : elles projettent le consommateur dans le stimulus (si vous étiez...). Les perceptions du consommateurs sont projetées sur une carte.
+Le mapping correspond à une projection sur une feuille rectangulaire de 60*40. 
+Le projective mapping correspond à une projection sur une feuille carrée de 40*40. 
+Avec le mapping, le consommateur, sans le savoir, hiérarchise ses dimensions de variabilité et accorde une importance plus grande à la 1ère dimension qu’à la 2ème dimension --> les dimensions de variabilité ne sont pas standardisés. 
+Avec le projective mapping, les dimensions de variabilité sont standardisés. 
+Avec ces méthodes, le consommateur est libre, mais dans un espace contraint (nodge). Le nodge permet d’orienter les gens vers des comportements vertueux (traduction : coup de pouce). 
+
+## Tri contraint
+
+???? 
+
+## Tri libre 
+
+Pour une tâche de tri, le consommateur dispose de plusieurs stimuli et doit les mettre dans des cases. Le but est de trouver une matrice de distance entre les produits pour les représenter sur un plan. Une matrice de distance est une matrice carrée où la distance entre x et y est, par définition, égale à la distance entre y et x. 
+
+Exemple sur les parfums : 12 produits et 60 conso, consignes :"Formez des groupes de parfums tel qu’ils contiennent des parfums similaires. Vous ne pouvez pas fait un seul groupe, ni autant de groupe que de produits. Décrivez chaque groupe avec des descripteurs c’est à dire des mots qui les définissent."
+
+Il ne faut pas faire un tableau de cooccurrences avec le nombre de fois où deux produits sont dans le même groupe : l’information brute des informations individuelles a été perdue. Il serait donc plus cohérent de faire un tableau de cooccurrences par juge afin d’obtenir des matrices de distances individuelles. Cette solution est cependant difficile à analyser. 
+
+Il faut utiliser un tableau avec 12 lignes (12 produits) et 60 colonnes (60 consommateurs). On considère que chaque consommateur induit une partition (manière dont il a divisé les données). A l’interaction, il y a le groupe dans lequel il a mis les produits : cohérence au niveau de la colonne.
+
+#### Analyse des tâches de tri
+
+Pour choisir entre plusieurs méthodes d’analyse des données de tri, il faut que le plan factoriel corresponde à celui que nous imaginons. Autrement dit, il faut une méthode pour laquelle les produits sont proches sur le plan s’ils sont souvent associés et les produits sont éloignés sur le plan s’ils sont peu souvent associés. 
+
+Un plan factoriel exprime des dimensions de variabilité, observables à travers les produits. 1ère dimension : compréhension de la différence entre produit en fonction d’une expertise puis 2ème dimension : compréhension de la différence entre produit, de manière orthogonale à la 1ère.
+
+Exemple sur les bières : 
+Un plan factoriel se construit sur les différences : la bière qui n’est jamais mise avec les autres doit être à l’une des extrémités du plan pour la 1ère dimension, la bière qui n’est presque jamais mise avec les autres doit être à l’une des extrémités du plan pour la 2ème dimension.
+
+
+### Application : tri hiérarchique sur les cartes 
+
+**Jeu de données "Descriptive" : **
+-> Lignes = enfants
+-> Colonnes = signalétique
+
+**Jeu de données "Tri" : **
+-> Lignes = cartes
+-> Chaque colonne correspond à un enfant et à une hiérarchie (p.ex. E80.H1 -> groupe formé par l'enfant 80 pour la 1ère hiérarchie)
+-> L'intersection correspond au groupe dans lequel la carte X a été placée par l'enfant xx (p.ex.80) lors de la hiérarchie x (p.ex. 1)
+
+Un grand nombre de partitions relève de la perception conso et de la complexité. Ce n'est pas parce que les juges ne font que peu de partitions que le produit n'est pas complexe : les juges n'ont peut être pas le niveau de profondeur pour voir la complexité du produit. 
+
+## ACP
+
+```{r}
+Descriptive <- read.table("Descriptive.csv", sep=";", stringsAsFactors = TRUE, header = TRUE)
+Descriptive$Age<-as.factor(Descriptive$Age)
+
+new_data <-Descriptive[,c(4:7, 9, 11)]
+
+res.acm <- PCA (new_data, quali.sup = 6 )
+plot.PCA(res.acm, choix = c("ind"), invisible = c("ind"), graph.type = c("classic"))
+
+res <- cbind(res.acm$ind$coord, new_data)
+summary(res)
+mod1 <- lm(Dim.1 ~ Age, data = res)
+res.anova <- anova(mod1); res.anova
+coefficients(mod1)
+summary(mod1)
+
+pairwise.t.test(res$Dim.1,res$Age) # Comparaison par paires
+```
+
+La dimension 1 est une dimension de complexité : orthogonalité avec le temps passé avec l'enfant : il n'y a pas de lien entre la complexité et le temps passé avec l'enfant. 
+La 1ère dimension porte 3 fois plus d'informations qu'une variable seule.
+
+Plus l'âge est élevé et plus la complexité est élevée.Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminue : l'éducation "standardise" les points de vue
+
+Il faut caractériser les groupes.
+
+## Compléter l'ACP avec des AFM
+
+En pratique : un bloc = un consommateur, avec autant de colonnes que de partitions (une partition = une variable qualitative).
+
+Le groupe de variables a une coordonnée au plus égale à 1 sur la 1ère dimension et au plus égale à 1 sur la 2ème dimension : mesure de liaison LG. La coordonnée est d’autant plus grande que la dimension exprime une direction de variabilité forte pour le groupe. 
+
+Un bloc de variables induit une structure sur les données : il sépare les individus de telle ou telle façon. La mesure de liaison exprime ça. La mesure de l’AFM compare la structure sur les individus et les structures induites pour le groupe sur ces individus. Si la coordonnée du groupe est élevée, la dimension sur laquelle on projette ce groupe correspond à une structure de variabilité forte pour le groupe. 
+La pondération de l’AFM est en 1/ la première valeur propre λ. Une mesure de liaison entre un groupe et une dimension se fait avec la somme des coefficients de corrélation au carré. Une composante, d’un point de vue des variables, maximise la somme des coefficients de corrélation au carré  Elle maximise ainsi l’inertie du jeu de données. 
+
+Nous cherchons la dimension qui maximise le coefficient de corrélation au carré entre les variables  1ère composante principale. La somme des r² est l’inertie des nuages des points. 
+Nous prenons une matrice X quantitative que l’on dédouble, puis on juxtapose ces deux matrices. Nous faisons l’AFM sur ces deux matrices : les deux groupes sont superposés, avec une coordonnée de 1 sur la 1ère dimension et une coordonnée de x sur la 2ème dimension. 
+Faire l’AFM sur la juxtaposition de deux matrices revient à faire une ACP sur la matrice. Une ACP est normée par défaut : on met le même poids à toutes les dimensions. 
+
+
+
+Deux stimulis sont d'autant plus proches qu'ils ont été mis ensemble un grand nombre de fois
+Pour des variables qualitatives, l'ACM est une méthode trop grossière 
+Il y a moins d'individus que de partitions puisqu'un individu = plusieurs partitions emboités
+Il faut prendre en compte l'emboitement et le fait que les points de vues soient équilibrés du point de vue de l'individu. Pour cela AFM : chaque tableau de données = partitions associées à un individu. 
+
+
+
+```{r}
+trih <- read.delim("trih.txt", row.names=1)
+nb_herarchie <- Descriptive$Nbdehiérarchies
+for (i in 1: 429){
+  trih[,i]<- as.factor(trih[,i])
+}
+res <- MFA(trih, group = nb_herarchie, type=rep("n",170), graph = FALSE)
+res$group
+```
+
+Pour représenter ces hiérarchies dans un espace, il faut rajouter H1, H2, H3 comme des groupes supplémentaires.
+Dans ces cas, l'ordinateur calcule la mesure de liaisons LG.
+
+Exemple : AFM sur 10 individus -> 10 blocs 
+1 er bloc -> dédoubler avec autant de groupes que de hiérarchies 
+Dans ce cas, H1 et H2 sont deux groupes supplémentaires
+
+-> Nous ajoutons les 2 partitions du 1er juge à nos données
+
+```{r}
+trih2 <- cbind(trih[,1:26],trih[,1:2])
+nb_hierarchie2 <- Descriptive[1:10,]$Nbdehiérarchies
+group = c(nb_hierarchie2, rep(1,2))
+res2 <- MFA(trih2, group = group, type=rep("n",12), graph = FALSE, num.group.sup = c(11,12))
+plot.MFA(res2, choix = "group")
+res.fahst<-fahst(trih2,group=group)
+res2$ind
+```
+
+-> Nous ajoutons les 3 partitions du 2ème juge à nos données 
+
+```{r}
+trih3 <- cbind(trih[,1:26],trih[,3:5])
+nb_hierarchie2 <- Descriptive[1:10,]$Nbdehiérarchies
+group = c(nb_hierarchie2, 3)
+res3 <- MFA(trih3, group = group, type=rep("n",13), graph = FALSE, num.group.sup = c(11,12,13))
+plot.MFA(res3, choix = "group")
+
+res.fahst<-fahst(trih3,group=group)
+```
+
+# Mesure de liaison entre 2 variables
+
+On va essayer lors de l'analyse de maximiser la somme des coefficients de corrélation au carré entre les variables et les composantes principales. On cherche ainsi la minimisation de l’inertie. 
+
+# Inertie d'un nuage d'individus
+
+#Interprétation du graph des variables
+
+####HCPC
+
+```{r}
+res.hcpc <- HCPC(res.mca)
+
+fviz_cluster(res.hcpc,
+             repel = TRUE,            
+             show.clust.cent = TRUE, 
+             palette = "jco",       
+             ggtheme = theme_minimal(),
+             main = "Factor map"
+)
+
+# Dendrogramme
+fviz_dend(res.hcpc, show_labels = FALSE)
+# Individus
+fviz_cluster(res.hcpc, geom = "point", main = "Factor map")
+res.hcpc$desc.var$category
+```
