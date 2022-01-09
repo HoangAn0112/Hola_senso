@@ -18,6 +18,13 @@ Il existe une différence entre "Statistiques appliquées à la perception des d
 
 En sensométrie, ce que nous mesurons peut avoir deux points de vue : hédonique – descriptif. Il faut toujours s’intéresser à la nature de ce qu’on mesure. De plus, la description du produit peut être faite de deux façons : en contraignant le consommateur (regard des produits à travers un prisme fixe) ou en le laissant libre (regard des produits à travers ses propres critères, sans grille de lecture à priori). 
 
+Les 4 étapes de la sensométrie sont : 
+- l'acquisition de données
+- Définition de la nature de l'individu statistique
+- Exploration des données
+- Restitution des données 
+Ces étapes permettent de comprendre l'interaction entre les produits et les consommatteurs ainsi que les effets principaux.
+
 Quand le cosommateur est contraint, le point de vue par rapport auquel il regarde les produits est fixé par l’expérimentateur : il n’y a pas forcément d’adéquation entre ce point de vue et le point de vue des consommateurs. En ce sens, le contraint ne mesure pas directement ce que voit le consommateur. Il est facile de traiter les données quand les consommateurs sont contraints. Exemples : QDA, JAR...
 Le libre est particulièrement intéressant quand les produits ont une forte valeur ajoutée (parfums, voitures de luxe, etc). Exemples : tri libre, tâche de verbalisation libre...
 
@@ -36,6 +43,11 @@ La mesure JAR est donc une mesure qui mélange caractérisation et jugement héd
 
 Il existe également le Free JAR : le consommateur est libre dans un espace contraint afin d’exprimer les qualités et défauts d’un produit sans aller trop loin dans son expression. 
 
+## Profil idéal
+Le profil idéal est utilisé dans le cadre de développement produit. Cette méthode mélange les jugements hédoniques des  consommateurs et la description sensorielle des produits, en élaborant des profils idéaux.
+Un  produit idéal est un produit qui maximise l'appréciation du consommateurs.
+On demande au consommateur de donner pour chaque descripteur une note sur l'intensité d'un attribut sensoriel, puis l'intensité idéal qu'il aurait souhaité. 
+
 ## Mapping - Projective Mapping
 
 Quelle est la différence entre projective mapping et mapping ? 
@@ -48,12 +60,12 @@ Avec le projective mapping, les dimensions de variabilité sont standardisés.
 Avec ces méthodes, le consommateur est libre, mais dans un espace contraint (nodge). Le nodge permet d’orienter les gens vers des comportements vertueux (traduction : coup de pouce). 
 
 ## Tri contraint
-
-???? 
+Pour une tâche de tri contraint, le consommateur est soumis à une liste de caractéristiques : il n'a donc pas de point de vue libre et l'on obtient des routines systématiques
 
 ## Tri libre 
 
 Pour une tâche de tri, le consommateur dispose de plusieurs stimuli et doit les mettre dans des cases. Le but est de trouver une matrice de distance entre les produits pour les représenter sur un plan. Une matrice de distance est une matrice carrée où la distance entre x et y est, par définition, égale à la distance entre y et x. 
+Cette méthode permet de mieux visualiser l'interaction entre le consommateur et les produits, et est utilisés pour les valeurs à fortes valeurs ajoutées. 
 
 Exemple sur les parfums : 12 produits et 60 conso, consignes :"Formez des groupes de parfums tel qu’ils contiennent des parfums similaires. Vous ne pouvez pas fait un seul groupe, ni autant de groupe que de produits. Décrivez chaque groupe avec des descripteurs c’est à dire des mots qui les définissent."
 
@@ -202,3 +214,4 @@ fviz_dend(res.hcpc, show_labels = FALSE)
 fviz_cluster(res.hcpc, geom = "point", main = "Factor map")
 res.hcpc$desc.var$category
 ```
+
