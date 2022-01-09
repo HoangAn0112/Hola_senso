@@ -16,6 +16,8 @@ library(SensoMineR)
 Les statistiques appliquées prennent en compte du sens physique des données dans l’analyse.
 Il existe une différence entre "Statistiques appliquées à la perception des données" et "Analyse des données de perception senso-conso" : les statistiques appliquées ne correspondent pas qu’à l’analyse des données, elles prennent également en compte l’acquisition des données et la restitution des résultats. L’analyse comprend la construction des tableaux de données, la réflexion sur la nature des individus statistiques, la visualisation et le traitement statistique. 
 
+Les statistiques appliquées ne se focalisent pas sur la compréhension des consommateurs ni des effets principaux. Les statistiques appliquées étudient l'interaction produit : consommateur.
+
 En sensométrie, ce que nous mesurons peut avoir deux points de vue : hédonique – descriptif. Il faut toujours s’intéresser à la nature de ce qu’on mesure. De plus, la description du produit peut être faite de deux façons : en contraignant le consommateur (regard des produits à travers un prisme fixe) ou en le laissant libre (regard des produits à travers ses propres critères, sans grille de lecture à priori). 
 
 Les 4 étapes de la sensométrie sont : 
@@ -30,7 +32,18 @@ Le libre est particulièrement intéressant quand les produits ont une forte val
 
 #### Les différents types recueil
 
+Le type de receuil de donnée est directement issu de la problématique posée. Voici une présentation des différents types de receuils rencontrés en sensométrie.
+
+## QDA 
+
+QDA pour Quantitative Descriptive Analysis : les produits sont notés selon une liste de descripteurs
+
+Cette méthode donne des descriptions contraintes : elle donne une liste d'atributs a priori (et ne permet pas une évaluation selon des critères propres au consommateur). Cette méthode donne un point de vue fixe sur le produit. Ce prisme est fixé par l'expérimentateur et non le consommateur.
+
 ##JAR
+
+JAR pour "Just about right", un descripteur va évaluer un produit en fonction d'une liste de descripteurs.
+
 La méthode JAR propose le plus souvent 5 degrés de satisfaction :
 
 * 1) Pas du tout assez
@@ -41,14 +54,20 @@ La méthode JAR propose le plus souvent 5 degrés de satisfaction :
 
 La mesure JAR est donc une mesure qui mélange caractérisation et jugement hédonique : il s'agit d'une mesure descriptive teintée d’hédonique. Pour résumer, la mesure JAR est contrainte et correspond à un mélange entre descriptif et hédonique. La méthode JAR présente une double difficulté : une difficulté dans l'interprétation de la mesure et une difficulté dans le traitement des données (effet propre au produit ou propre à l'espace produit ?)
 
-Il existe également le Free JAR : le consommateur est libre dans un espace contraint afin d’exprimer les qualités et défauts d’un produit sans aller trop loin dans son expression. 
 
-## Profil idéal
-Le profil idéal est utilisé dans le cadre de développement produit. Cette méthode mélange les jugements hédoniques des  consommateurs et la description sensorielle des produits, en élaborant des profils idéaux.
-Un  produit idéal est un produit qui maximise l'appréciation du consommateurs.
-On demande au consommateur de donner pour chaque descripteur une note sur l'intensité d'un attribut sensoriel, puis l'intensité idéal qu'il aurait souhaité. 
+## Tri contraint
+Pour une tâche de tri contraint, le consommateur est soumis à une liste de caractéristiques : il n'a donc pas de point de vue libre et l'on obtient des routines systématiques
+
+
+Ces méthodes peuvent être qualifiées de méthodes "sous contrainte". Leur analyse peut se faire sous la forme de routine systématiques et généralisables. Cependant, ces méthodes ne permettent pas de décrire les interactions produits : consommateurs. 
+
+C'est pourquoi nous allons nous focaliser sur des méthodes dites "libres", méthodes permettant d'intégrer un aspect psychologique dans la perseption d'un produit. Ces méthodes sont par exemple le tri libre, l'analyse textuelle ou encore le Free JAR (le consommateur est libre dans un espace contraint afin d’exprimer les qualités et défauts d’un produit sans aller trop loin dans son expression).
+
+Les méthodes "libres" sont particulièrement adaptées à l'évaluation de produits non alimentaires, des concepts (exemple : l'expérience utilisateur).
 
 ## Mapping - Projective Mapping
+
+Cette méthodes et une méthode phare en méthode "libre". Elle consiste à positionner les stimulis les uns par rapport aux autres sur une feuilles blanche. Cette méthode permet de classer et d'ordonner les produits. Cette méthode se décline en deux variantes :
 
 Quelle est la différence entre projective mapping et mapping ? 
 
@@ -57,10 +76,7 @@ Le mapping correspond à une projection sur une feuille rectangulaire de 60*40.
 Le projective mapping correspond à une projection sur une feuille carrée de 40*40. 
 Avec le mapping, le consommateur, sans le savoir, hiérarchise ses dimensions de variabilité et accorde une importance plus grande à la 1ère dimension qu’à la 2ème dimension --> les dimensions de variabilité ne sont pas standardisés. 
 Avec le projective mapping, les dimensions de variabilité sont standardisés. 
-Avec ces méthodes, le consommateur est libre, mais dans un espace contraint (nodge). Le nodge permet d’orienter les gens vers des comportements vertueux (traduction : coup de pouce). 
-
-## Tri contraint
-Pour une tâche de tri contraint, le consommateur est soumis à une liste de caractéristiques : il n'a donc pas de point de vue libre et l'on obtient des routines systématiques
+Avec ces méthodes, le consommateur est libre, mais dans un espace contraint (nodge). Le nodge permet d’orienter les gens vers des comportements vertueux (traduction : coup de pouce).
 
 ## Tri libre 
 
@@ -73,6 +89,14 @@ Il ne faut pas faire un tableau de cooccurrences avec le nombre de fois où deux
 
 Il faut utiliser un tableau avec 12 lignes (12 produits) et 60 colonnes (60 consommateurs). On considère que chaque consommateur induit une partition (manière dont il a divisé les données). A l’interaction, il y a le groupe dans lequel il a mis les produits : cohérence au niveau de la colonne.
 
+
+### Traitement de données en sensométrie
+
+## Profil idéal
+Le profil idéal est utilisé dans le cadre de développement produit. Cette méthode mélange les jugements hédoniques des  consommateurs et la description sensorielle des produits, en élaborant des profils idéaux.
+Un  produit idéal est un produit qui maximise l'appréciation du consommateurs.
+On demande au consommateur de donner pour chaque descripteur une note sur l'intensité d'un attribut sensoriel, puis l'intensité idéal qu'il aurait souhaité. 
+
 #### Analyse des tâches de tri
 
 Pour choisir entre plusieurs méthodes d’analyse des données de tri, il faut que le plan factoriel corresponde à celui que nous imaginons. Autrement dit, il faut une méthode pour laquelle les produits sont proches sur le plan s’ils sont souvent associés et les produits sont éloignés sur le plan s’ils sont peu souvent associés. 
@@ -81,7 +105,6 @@ Un plan factoriel exprime des dimensions de variabilité, observables à travers
 
 Exemple sur les bières : 
 Un plan factoriel se construit sur les différences : la bière qui n’est jamais mise avec les autres doit être à l’une des extrémités du plan pour la 1ère dimension, la bière qui n’est presque jamais mise avec les autres doit être à l’une des extrémités du plan pour la 2ème dimension.
-
 
 ### Application : tri hiérarchique sur les cartes 
 
@@ -131,9 +154,9 @@ En pratique : un bloc = un consommateur, avec autant de colonnes que de partitio
 Le groupe de variables a une coordonnée au plus égale à 1 sur la 1ère dimension et au plus égale à 1 sur la 2ème dimension : mesure de liaison LG. La coordonnée est d’autant plus grande que la dimension exprime une direction de variabilité forte pour le groupe. 
 
 Un bloc de variables induit une structure sur les données : il sépare les individus de telle ou telle façon. La mesure de liaison exprime ça. La mesure de l’AFM compare la structure sur les individus et les structures induites pour le groupe sur ces individus. Si la coordonnée du groupe est élevée, la dimension sur laquelle on projette ce groupe correspond à une structure de variabilité forte pour le groupe. 
-La pondération de l’AFM est en 1/ la première valeur propre λ. Une mesure de liaison entre un groupe et une dimension se fait avec la somme des coefficients de corrélation au carré. Une composante, d’un point de vue des variables, maximise la somme des coefficients de corrélation au carré  Elle maximise ainsi l’inertie du jeu de données. 
+La pondération de l’AFM est en 1/ la première valeur propre λ. Une mesure de liaison entre un groupe et une dimension se fait avec la somme des coefficients de corrélation au carré. Une composante, d’un point de vue des variables, maximise la somme des coefficients de corrélation au carré. Elle maximise ainsi l’inertie du jeu de données. 
 
-Nous cherchons la dimension qui maximise le coefficient de corrélation au carré entre les variables  1ère composante principale. La somme des r² est l’inertie des nuages des points. 
+Nous cherchons la dimension qui maximise le coefficient de corrélation au carré entre les variables : la 1ère composante principale. La somme des r² est l’inertie des nuages des points. 
 Nous prenons une matrice X quantitative que l’on dédouble, puis on juxtapose ces deux matrices. Nous faisons l’AFM sur ces deux matrices : les deux groupes sont superposés, avec une coordonnée de 1 sur la 1ère dimension et une coordonnée de x sur la 2ème dimension. 
 Faire l’AFM sur la juxtaposition de deux matrices revient à faire une ACP sur la matrice. Une ACP est normée par défaut : on met le même poids à toutes les dimensions. 
 
@@ -214,4 +237,19 @@ fviz_dend(res.hcpc, show_labels = FALSE)
 fviz_cluster(res.hcpc, geom = "point", main = "Factor map")
 res.hcpc$desc.var$category
 ```
+
+#### Le tri aggloméré 
+
+Le tri aggloméré est un tri avec caractérisation des groupes, on peut par exemple prendre en compte les étapes liées au tri, on ajoute une dimension temporelle.
+
+Il existe 2 stratégies pour prendre en compte les étapes : la stratégie agglomérative ou divisible 
+- La stratégie agglomérative consiste à regrouper au fur et à mesure les groupes jusqu'à atteindre 1 seul groupe contenant tous les produits
+- La stratégie divisible part d'un groupe rassemblant la totalité des produits pour ensuite les répartir en sous groupes.
+
+Ces données ont alors une certaine structure : 1 bloc correspond à un consommateur (1 bloc est constitué d'autant de colonnes que le consommateur donne de parition)
+Il faut alors analyser ces données à l'aide d'une AFMH qui permet de prendre en compte cette suite de partition emboitées.
+
+Pour analyser le processus cognitif des sujets, il faut analyser le graph des variables.
+
+
 
