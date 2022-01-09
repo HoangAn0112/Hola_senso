@@ -5,8 +5,8 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-setwd("~/Agro/5A/Statistique de donnees de perception")
 library(FactoMineR)
+library(SensoMineR)
 ```
 
 #### Introduction aux données de perception
