@@ -1,0 +1,109 @@
+---
+
+title: "JAR"
+author: "Hoang An"
+date: "11/27/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+jdd <- read.delim("C:/Users/Admin/Downloads/jdd_initial.txt")
+JARquali <- read.delim("C:/Users/Admin/Downloads/jdd_JARquali (1).txt")
+plan <- read.delim("C:/Users/Admin/Downloads/plan sonic.txt")
+```
+
+```{r}
+library(SensoMineR)
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+library(tm)
+library(reshape2)
+library(Xplortext)
+```
+
+###
+
+```{r}
+res.TD.initial <- TextData(JARquali, var.text=c(35), idiom="fr", remov.number=FALSE, context.quali=c("Juge","Son"), context.quanti = c(2,7:33), stop.word.user =	c("trop","assez","peu","fait","tout"), stop.word.tm = TRUE, graph = TRUE)
+
+res.LexCA.initial<-LexCA(res.TD.initial,graph=T)
+names(res.LexCA.initial$col.sup)
+```
+
+```{r}
+#JARquali$Juge <- as.factor(JARquali$Juge)
+
+JARquali$Tempo <- as.factor(JARquali$Tempo)
+JARquali$Hauteur <- as.factor(JARquali$Hauteur)
+JARquali$Sexe <- as.factor(JARquali$Sexe)
+#JARquali$CSP <- as.factor(JARquali$CSP)
+#JARquali$Son <- as.factor(JARquali$Son)
+#JARquali$Rang <- as.factor(JARquali$Rang)
+#JARquali$Instrument <- as.factor(JARquali$Instrument)
+
+summary(JARquali)
+```
+
+```{r}
+judge.list = JARquali$Juge %>%
+  as.factor() %>%
+  levels() %>%
+  as.numeric()
+
+product.list =  JARquali$Son %>%
+    as.factor() %>%
+    levels() %>%
+    as.data.frame()
+    
+colnames(product.list) <- "Son"
+
+```
+
+```{r}
+for (i in 1:length(judge.list)){
+  sub <- subset(JARquali, Juge == i, selec = c(Son, Pourquoi))
+  colnames(sub)[2] <- as.character(i) 
+  product.list <- left_join(product.list,sub)
+}
+```
+
+Drop NA 
+
+```{r}
+Sanscom <- product.list[,c(11,14,17,21,26,27,39,42,48,49,50)]
+
+product.list2 <- product.list[,-c(11,14,17,21,26,27,39,43,48,49,50)]
+
+fast(product.list2, sep.words = " ", label.miss = "Rien")
+
+names(product.list)
+class(JARquali$Pourquoi)
+tm_map(JARquali$Pourquoi) #### retrait mot inutiles
+
+```
+```{r}
+res.TD.JAR <- TextData(JARquali, var.text=c(35), idiom="fr", remov.number=FALSE, context.quali=c("Sexe","Tempo","Hauteur","Instrument"), context.quanti = c(7:25,34), stop.word.user =	c("trop","assez","peu","fait","tout"), stop.word.tm = TRUE, graph = TRUE)
+
+```
+
+```{r}
+res.LexCA<-LexCA(res.TD.JAR,graph=T,lmw=2)
+names(res.LexCA$col.sup)
+```
+
+Les mots de liaisons ne sont pas pris en considèration ainsi que les mots "trop", "peu", "manque".
+Pour ce faire les fonctions stop.word.user et stop.word.tm sont utilsés. 
+Les mots utiles les plus utilisés (fréquence minumum de 20) pour expliquer les notes données sont par ordre de fréquence : 
+lent, aigu, classe, technologie, haut et gamme pour "haut de gamme", inovant, sérieux, rapide, bien, grave, triste, strident et dynamique
+
+Le mot lent est le plus utilisé (fréquence égale à 79) et le mot rapide fait parti des mots les plus utilisés avec une fréquence de 27. Le jury donne donc beaucoup d'importance à la vitesse du son dans sa notation. Le jury trouve davantage de son lent que rapide. L'utilisation des mots dynamique indique que le jury semble apprécier les sont plus rapide.
+Le mot aigue est le deuxieme mot le plus fréquent (57), le mot grave est utilisé deux fois moins souvent (24). Le jury accorde donc une note importantce à la fréquence des sons. L'utilisation du mot stident indique le caractère désagréable des sons trop aigue.
+Les mots "classe", "haut de gamme", "serieux" sont fréquement utilisés. Le jury a donc bien pris en considèration l'adéquation du son avec l'image "haut de gamme" de l'entreprise dans sa notation. 
+Ils ont aussi aussi utilisé le terme "technologique" ce qui indique que plusieurs sons renvoyait cette image comme le souhaite l'entreprise.
+Enfin l'utilisation du mot "bien" couplé à l'utilisation des mots "strident" et "dynamique" indique que le jury note les produits en fonction de leur caractère agréable.
+
