@@ -246,10 +246,41 @@ Il existe 2 stratégies pour prendre en compte les étapes : la stratégie agglo
 - La stratégie agglomérative consiste à regrouper au fur et à mesure les groupes jusqu'à atteindre 1 seul groupe contenant tous les produits
 - La stratégie divisible part d'un groupe rassemblant la totalité des produits pour ensuite les répartir en sous groupes.
 
-Ces données ont alors une certaine structure : 1 bloc correspond à un consommateur (1 bloc est constitué d'autant de colonnes que le consommateur donne de parition)
-Il faut alors analyser ces données à l'aide d'une AFMH qui permet de prendre en compte cette suite de partition emboitées.
+Ces données ont alors une certaine structure : 1 bloc correspond à un consommateur (1 bloc est constitué d'autant de colonnes que le consommateur donne de parition). 
 
-Pour analyser le processus cognitif des sujets, il faut analyser le graph des variables.
+L'AFM permet de représenter les groupe de variables liées au consommateur. La structure en groupe de l'AFM permet d'obtenir 2 informations :
+
+- Un nouvel objet : a représentation des groupes de variables (calcul de coordonnées) 
+- La mesure de liaison LG 
+
+**Aides à l'interprésation de l'AFM :** 
+- La liaison LG correspond à la liaison entre un groupe de variable et une dimension. Cette liaison permet d'exprimer la structure sur les individus. Elle correspond à la somme sur variables des coefficients de corrélation au carré. 
+
+-  Le cœur de l’AFM repose sur une analyse factorielle (ACP dans le cas de variables quantitatives, ACM dans le cas de variables qualitatives). Ainsi, la première composante principale est obtenue en maximisant la somme du carré des écarts entre les variables du jeu de donnée et la dimension. Cette somme de carré d'écarts des variables est pondérée par l'inertie de la dimension. Ainsi, si la somme des carrés des écarts des variables et de la dimension est égale à l'inertie de cette dimension, alors la coordonnée du groupe vaut 1. De ce fait, les coordonnées des groupes sont toujours comprises entre 0 et 1. 
+- Si la coordonnée du groupe est élevée sur une dimention, il existe une structure de variabilité forte pour ce groupe. 
+- Les dimensions structurantes soulignent un point commun entre les groupes.
+
+Remarque : 
+Il est possible à l'aide d'une AFMH de prendre en compte une suite de partition emboitées, et par exemple prendre en comptre le processus congnitif du consommateur.
+
+**Cas du tri agglomératif séquencé :**
+Dans l'analyse sensorielle, on peut distinguer 2 démarches :
+- Lorque l'on a peu de produits, la démarche est orientée vers du prototypage, on cherche à comprendre l'espace produit. 
+- Lorsque l'on a beaucoup de produits, on cherche à étudier le consommateur, à faire une étude de marché
+Dans ce dernier cas, on peut utiliser une méthode de tri agglomératif séquencé. Cela consiste à réaliser plusieurs séances de tri. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
