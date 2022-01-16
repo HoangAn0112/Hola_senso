@@ -122,30 +122,50 @@ Un grand nombre de partitions relève de la perception conso et de la complexit�
 ## ACP
 
 ```{r}
-Descriptive <- read.table("Descriptive.csv", sep=";", stringsAsFactors = TRUE, header = TRUE)
-Descriptive$Age<-as.factor(Descriptive$Age)
+Descriptive <- read.table("Descriptive.csv", sep=";", stringsAsFactors = TRUE, header = TRUE) #Ouverture du jeu de données
+Descriptive$Age<-as.factor(Descriptive$Age) #Transformation de la variable Age en facteur
 
-new_data <-Descriptive[,c(4:7, 9, 11)]
+```
 
+Création du jeu de données que l'on va analyser, composé des colonnes 4, 5, 6, 7, 9 et 11. Ce jeu de données est maintenant composé uniquement de variables quantitatives. Les colonnes 4 à 7 décrive la manière dont les enfant ont trié (nombre de hierarchies, nombre de classes, nom de critères cités, etc). On a 2 autres colonnes : Le temps passé avec l'enfants et l'âge de l'enfant.
+```{r}
+new_data <-Descriptive[,c(4:7, 9, 11)] 
+```
+
+On réalise ensuite l'ACP sur les variables séléctionnées. On peut ensuite faire apparaitre les coordonnées des individus sur les dimensions de cette ACP.
+
+```{r}
 res.acm <- PCA (new_data, quali.sup = 6 )
 plot.PCA(res.acm, choix = c("ind"), invisible = c("ind"), graph.type = c("classic"))
 
 res <- cbind(res.acm$ind$coord, new_data)
 summary(res)
-mod1 <- lm(Dim.1 ~ Age, data = res)
-res.anova <- anova(mod1); res.anova
-coefficients(mod1)
-summary(mod1)
-
-pairwise.t.test(res$Dim.1,res$Age) # Comparaison par paires
 ```
 
 La dimension 1 est une dimension de complexité : orthogonalité avec le temps passé avec l'enfant : il n'y a pas de lien entre la complexité et le temps passé avec l'enfant. 
 La 1ère dimension porte 3 fois plus d'informations qu'une variable seule.
 
+
+On séléctionne le modèle avec uniquement l'age de l'enfant pour tester une éventuelle différence de résultats de la classifiaction en fonction de l'âge
+
+```{r}
+mod1 <- lm(Dim.1 ~ Age, data = res)
+res.anova <- anova(mod1); res.anova
+coefficients(mod1)
+summary(mod1)
+```
+
 Plus l'âge est élevé et plus la complexité est élevée.Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminue : l'éducation "standardise" les points de vue
 
 Il faut caractériser les groupes.
+
+On peut aussi réaliser un test de comparaison par paire sur notre résultat d'ACP en ne prenant que les résultats de la 1ère dimension. Dans le résultats qui suit, on teste 2 à 2 les différents âges pour faire ressortir une éventuelle différence dû à l'age de l'enfant.
+
+```{r}
+pairwise.t.test(res$Dim.1,res$Age) 
+```
+
+On remarque ainsi que les enfants très jeunes (3 et 4 ans) ont des résultats de classification significativement différents des plus grands. A partir de 5 an, néanmoins, on ne trouve plus de différence liée à l'âge.
 
 ## Compléter l'ACP avec des AFM
 
@@ -166,7 +186,6 @@ Deux stimulis sont d'autant plus proches qu'ils ont été mis ensemble un grand 
 Pour des variables qualitatives, l'ACM est une méthode trop grossière 
 Il y a moins d'individus que de partitions puisqu'un individu = plusieurs partitions emboités
 Il faut prendre en compte l'emboitement et le fait que les points de vues soient équilibrés du point de vue de l'individu. Pour cela AFM : chaque tableau de données = partitions associées à un individu. 
-
 
 
 ```{r}
