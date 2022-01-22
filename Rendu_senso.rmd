@@ -13,26 +13,28 @@ library(SensoMineR)
 
 ## Réflexion sur les statistiques appliquées 
 
-Les statistiques appliquées prennent en compte du sens physique des données dans l’analyse.
+Les statistiques appliquées prennent en compte le sens physique des données dans l’analyse.
 Il existe une différence entre "Statistiques appliquées à la perception des données" et "Analyse des données de perception senso-conso" : les statistiques appliquées ne correspondent pas qu’à l’analyse des données, elles prennent également en compte l’acquisition des données et la restitution des résultats. L’analyse comprend la construction des tableaux de données, la réflexion sur la nature des individus statistiques, la visualisation et le traitement statistique. 
 
 Les statistiques appliquées ne se focalisent pas sur la compréhension des consommateurs ni des effets principaux. Les statistiques appliquées étudient l'interaction produit : consommateur.
 
-En sensométrie, ce que nous mesurons peut avoir deux points de vue : hédonique – descriptif. Il faut toujours s’intéresser à la nature de ce qu’on mesure. De plus, la description du produit peut être faite de deux façons : en contraignant le consommateur (regard des produits à travers un prisme fixe) ou en le laissant libre (regard des produits à travers ses propres critères, sans grille de lecture à priori). 
+En sensométrie, ce que nous mesurons peut avoir deux points de vue : hédonique – descriptif. Il faut toujours s’intéresser à la nature de ce qu’on mesure. De plus, la description du produit peut être faite de deux façons : en contraignant le consommateur (regard des produits au travers d'un prisme fixe) ou en le laissant libre (regard des produits au travers de ses propres critères, sans grille de lecture à priori). 
 
 Les 4 étapes de la sensométrie sont : 
-- l'acquisition de données
-- Définition de la nature de l'individu statistique
-- Exploration des données
-- Restitution des données 
+
+ - l'Acquisition de données
+ - Définition de la nature de l'individu statistique
+ - Exploration des données
+ - Restitution des données 
+
 Ces étapes permettent de comprendre l'interaction entre les produits et les consommatteurs ainsi que les effets principaux.
 
-Quand le cosommateur est contraint, le point de vue par rapport auquel il regarde les produits est fixé par l’expérimentateur : il n’y a pas forcément d’adéquation entre ce point de vue et le point de vue des consommateurs. En ce sens, le contraint ne mesure pas directement ce que voit le consommateur. Il est facile de traiter les données quand les consommateurs sont contraints. Exemples : QDA, JAR...
-Le libre est particulièrement intéressant quand les produits ont une forte valeur ajoutée (parfums, voitures de luxe, etc). Exemples : tri libre, tâche de verbalisation libre...
+Quand le consommateur est contraint, le point de vue avec lequel il regarde les produits est fixé par l’expérimentateur : il n’y a pas forcément d’adéquation entre ce point de vue et le point de vue des consommateurs. En ce sens, le "contraint" ne mesure pas directement ce que voit le consommateur. Il est facile de traiter les données quand les consommateurs sont contraints. Exemples : QDA, JAR...
+Le "libre" est particulièrement intéressant quand les produits ont une forte valeur ajoutée (parfums, voitures de luxe, etc). Exemples : tri libre, tâche de verbalisation libre...
 
 #### Les différents types recueil
 
-Le type de receuil de donnée est directement issu de la problématique posée. Voici une présentation des différents types de receuils rencontrés en sensométrie.
+Le type de receuil de données est directement issu de la problématique posée. Voici une présentation des différents types de receuil rencontrés en sensométrie.
 
 ## QDA 
 
@@ -46,18 +48,17 @@ JAR pour "Just about right", un descripteur va évaluer un produit en fonction d
 
 La méthode JAR propose le plus souvent 5 degrés de satisfaction :
 
-* 1) Pas du tout assez
-* 2) Pas assez
-* 3) Juste bien
-* 4) Trop
-* 5) Beaucoup trop
+ - 1) Pas du tout assez
+ - 2) Pas assez
+ - 3) Juste bien
+ - 4) Trop
+ - 5) Beaucoup trop
 
-La mesure JAR est donc une mesure qui mélange caractérisation et jugement hédonique : il s'agit d'une mesure descriptive teintée d’hédonique. Pour résumer, la mesure JAR est contrainte et correspond à un mélange entre descriptif et hédonique. La méthode JAR présente une double difficulté : une difficulté dans l'interprétation de la mesure et une difficulté dans le traitement des données (effet propre au produit ou propre à l'espace produit ?)
-
+La mesure JAR est donc une mesure qui mélange caractérisation et jugement hédonique : il s'agit d'une mesure descriptive teintée d’hédonique. Pour résumer, la mesure JAR est contrainte et correspond à un mélange entre descriptif et hédonique. La méthode JAR présente une double difficulté : une difficulté dans l'interprétation de la mesure et une difficulté dans le traitement des données (effet propre au produit ou propre à l'espace produit ?).
 
 ## Tri contraint
-Pour une tâche de tri contraint, le consommateur est soumis à une liste de caractéristiques : il n'a donc pas de point de vue libre et l'on obtient des routines systématiques
 
+Pour une tâche de tri contraint, le consommateur est mis face à une liste de caractéristiques : il n'a donc pas de point de vue libre et l'on obtient des routines systématiques.
 
 Ces méthodes peuvent être qualifiées de méthodes "sous contrainte". Leur analyse peut se faire sous la forme de routine systématiques et généralisables. Cependant, ces méthodes ne permettent pas de décrire les interactions produits : consommateurs. 
 
@@ -67,25 +68,33 @@ Les méthodes "libres" sont particulièrement adaptées à l'évaluation de prod
 
 ## Mapping - Projective Mapping
 
-Cette méthodes et une méthode phare en méthode "libre". Elle consiste à positionner les stimulis les uns par rapport aux autres sur une feuilles blanche. Cette méthode permet de classer et d'ordonner les produits. Cette méthode se décline en deux variantes :
+Cette méthodes et une méthode phare parmi les méthodes "libres". Elle consiste à positionner les stimulis les uns par rapport aux autres sur une feuilles blanche. Cette méthode permet de classer et d'ordonner les produits. Cette méthode se décline en deux variantes :
 
-Quelle est la différence entre projective mapping et mapping ? 
+ - Le mapping correspond à une projection sur une feuille rectangulaire de 60*40. 
+ - Le projective mapping correspond à une projection sur une feuille carrée de 40*40
 
-Dans tous les cas, ces tâches sont projectives : elles projettent le consommateur dans le stimulus (si vous étiez...). Les perceptions du consommateurs sont projetées sur une carte.
-Le mapping correspond à une projection sur une feuille rectangulaire de 60*40. 
-Le projective mapping correspond à une projection sur une feuille carrée de 40*40. 
-Avec le mapping, le consommateur, sans le savoir, hiérarchise ses dimensions de variabilité et accorde une importance plus grande à la 1ère dimension qu’à la 2ème dimension --> les dimensions de variabilité ne sont pas standardisés. 
-Avec le projective mapping, les dimensions de variabilité sont standardisés. 
+Quelle est la différence entre projective mapping et mapping ?
+
+Avec le mapping, le consommateur, sans le savoir, hiérarchise ses dimensions de variabilité et accorde une importance plus grande à la 1ère dimension qu’à la 2ème dimension. Les dimensions de variabilité ne sont donc pas standardisées.
+
+Avec le projective mapping, les dimensions de variabilité sont standardisées. 
+
 Avec ces méthodes, le consommateur est libre, mais dans un espace contraint (nodge). Le nodge permet d’orienter les gens vers des comportements vertueux (traduction : coup de pouce).
+
+Dans tous les cas, ces tâches sont projectives : elles projettent le consommateur dans le stimulus (si vous étiez...). Les perceptions du consommateur sont projetées sur une carte.
 
 ## Tri libre 
 
 Pour une tâche de tri, le consommateur dispose de plusieurs stimuli et doit les mettre dans des cases. Le but est de trouver une matrice de distance entre les produits pour les représenter sur un plan. Une matrice de distance est une matrice carrée où la distance entre x et y est, par définition, égale à la distance entre y et x. 
-Cette méthode permet de mieux visualiser l'interaction entre le consommateur et les produits, et est utilisés pour les valeurs à fortes valeurs ajoutées. 
 
-Exemple sur les parfums : 12 produits et 60 conso, consignes :"Formez des groupes de parfums tel qu’ils contiennent des parfums similaires. Vous ne pouvez pas fait un seul groupe, ni autant de groupe que de produits. Décrivez chaque groupe avec des descripteurs c’est à dire des mots qui les définissent."
+Cette méthode permet de mieux visualiser l'interaction entre le consommateur et les produits, et est utilisé pour les valeurs à fortes valeurs ajoutées. 
 
-Il ne faut pas faire un tableau de cooccurrences avec le nombre de fois où deux produits sont dans le même groupe : l’information brute des informations individuelles a été perdue. Il serait donc plus cohérent de faire un tableau de cooccurrences par juge afin d’obtenir des matrices de distances individuelles. Cette solution est cependant difficile à analyser. 
+Exemple sur des parfums :
+
+ - 12 produits et 60 consommateurs
+ - consignes :"Formez des groupes de parfums tel que les groupes contiennent des parfums similaires. Vous ne pouvez pas faire un seul groupe, ni autant de groupe que de produits. Décrivez chaque groupe avec des descripteurs, c’est à dire des mots qui les définissent."
+
+Il ne faut pas faire un tableau de co-occurrences avec le nombre de fois où deux produits sont dans le même groupe : l’information brute des informations individuelles a été perdue. Il serait donc plus cohérent de faire un tableau de co-occurrences par juge afin d’obtenir des matrices de distances individuelles. Cette solution est cependant difficile à analyser. 
 
 Il faut utiliser un tableau avec 12 lignes (12 produits) et 60 colonnes (60 consommateurs). On considère que chaque consommateur induit une partition (manière dont il a divisé les données). A l’interaction, il y a le groupe dans lequel il a mis les produits : cohérence au niveau de la colonne.
 
@@ -93,18 +102,23 @@ Il faut utiliser un tableau avec 12 lignes (12 produits) et 60 colonnes (60 cons
 ### Traitement de données en sensométrie
 
 ## Profil idéal
-Le profil idéal est utilisé dans le cadre de développement produit. Cette méthode mélange les jugements hédoniques des  consommateurs et la description sensorielle des produits, en élaborant des profils idéaux.
+
+Le profil idéal est utilisé dans le cadre de développement produit. Cette méthode mélange les jugements hédoniques des consommateurs et la description sensorielle des produits, en élaborant des profils idéaux.
+
 Un  produit idéal est un produit qui maximise l'appréciation du consommateurs.
+
 On demande au consommateur de donner pour chaque descripteur une note sur l'intensité d'un attribut sensoriel, puis l'intensité idéal qu'il aurait souhaité. 
 
 #### Analyse des tâches de tri
 
 Pour choisir entre plusieurs méthodes d’analyse des données de tri, il faut que le plan factoriel corresponde à celui que nous imaginons. Autrement dit, il faut une méthode pour laquelle les produits sont proches sur le plan s’ils sont souvent associés et les produits sont éloignés sur le plan s’ils sont peu souvent associés. 
 
-Un plan factoriel exprime des dimensions de variabilité, observables à travers les produits. 1ère dimension : compréhension de la différence entre produit en fonction d’une expertise puis 2ème dimension : compréhension de la différence entre produit, de manière orthogonale à la 1ère.
+Un plan factoriel exprime des dimensions de variabilité, observables à travers les produits :
 
-Exemple sur les bières : 
-Un plan factoriel se construit sur les différences : la bière qui n’est jamais mise avec les autres doit être à l’une des extrémités du plan pour la 1ère dimension, la bière qui n’est presque jamais mise avec les autres doit être à l’une des extrémités du plan pour la 2ème dimension.
+ - 1ère dimension : compréhension de la différence entre produit en fonction d’une expertise
+ - 2ème dimension : compréhension de la différence entre produit, de manière orthogonale à la 1ère
+
+_Exemple sur les bières_ : Un plan factoriel se construit sur les différences : la bière qui n’est jamais mise avec les autres doit être à l’une des extrémités du plan pour la 1ère dimension, la bière qui n’est presque jamais mise avec les autres doit être à l’une des extrémités du plan pour la 2ème dimension.
 
 ### Application : tri hiérarchique sur les cartes 
 
@@ -127,7 +141,8 @@ Descriptive$Age<-as.factor(Descriptive$Age) #Transformation de la variable Age e
 
 ```
 
-Création du jeu de données que l'on va analyser, composé des colonnes 4, 5, 6, 7, 9 et 11. Ce jeu de données est maintenant composé uniquement de variables quantitatives. Les colonnes 4 à 7 décrive la manière dont les enfant ont trié (nombre de hierarchies, nombre de classes, nom de critères cités, etc). On a 2 autres colonnes : Le temps passé avec l'enfants et l'âge de l'enfant.
+Création du jeu de données que l'on va analyser, composé des colonnes 4, 5, 6, 7, 9 et 11. Ce jeu de données est maintenant composé uniquement de variables quantitatives. Les colonnes 4 à 7 décrivent la manière dont les enfant ont trié (nombre de hierarchies, nombre de classes, nom de critères cités, etc). On a 2 autres colonnes : le temps passé avec l'enfant et l'âge de l'enfant.
+
 ```{r}
 new_data <-Descriptive[,c(4:7, 9, 11)] 
 ```
@@ -142,11 +157,10 @@ res <- cbind(res.acm$ind$coord, new_data)
 summary(res)
 ```
 
-La dimension 1 est une dimension de complexité : orthogonalité avec le temps passé avec l'enfant : il n'y a pas de lien entre la complexité et le temps passé avec l'enfant. 
-La 1ère dimension porte 3 fois plus d'informations qu'une variable seule.
+La dimension 1 est une dimension de complexité : orthogonalité avec le temps passé avec l'enfant ; il n'y a pas de lien entre la complexité et le temps passé avec l'enfant. La 1ère dimension porte 3 fois plus d'informations qu'une variable seule.
 
 
-On séléctionne le modèle avec uniquement l'age de l'enfant pour tester une éventuelle différence de résultats de la classifiaction en fonction de l'âge
+On séléctionne le modèle avec uniquement l'age de l'enfant pour tester une éventuelle différence de résultats de la classifiaction en fonction de l'âge.
 
 ```{r}
 mod1 <- lm(Dim.1 ~ Age, data = res)
@@ -155,7 +169,7 @@ coefficients(mod1)
 summary(mod1)
 ```
 
-Plus l'âge est élevé et plus la complexité est élevée.Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminue : l'éducation "standardise" les points de vue
+Plus l'âge est élevé et plus la complexité est élevée. Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminuent : l'éducation "standardise" les points de vue.
 
 Il faut caractériser les groupes.
 
@@ -173,20 +187,18 @@ En pratique : un bloc = un consommateur, avec autant de colonnes que de partitio
 
 Le groupe de variables a une coordonnée au plus égale à 1 sur la 1ère dimension et au plus égale à 1 sur la 2ème dimension : mesure de liaison LG. La coordonnée est d’autant plus grande que la dimension exprime une direction de variabilité forte pour le groupe. 
 
-Un bloc de variables induit une structure sur les données : il sépare les individus de telle ou telle façon. La mesure de liaison exprime ça. La mesure de l’AFM compare la structure sur les individus et les structures induites pour le groupe sur ces individus. Si la coordonnée du groupe est élevée, la dimension sur laquelle on projette ce groupe correspond à une structure de variabilité forte pour le groupe. 
+Un bloc de variables induit une structure sur les données : il sépare les individus de telle ou telle façon. La mesure de liaison exprime ça. La mesure de l’AFM compare la structure sur les individus et les structures induites pour le groupe sur ces individus. Si la coordonnée du groupe est élevée, la dimension sur laquelle on projette ce groupe correspond à une structure de variabilité forte pour le groupe.
+
 La pondération de l’AFM est en 1/ la première valeur propre λ. Une mesure de liaison entre un groupe et une dimension se fait avec la somme des coefficients de corrélation au carré. Une composante, d’un point de vue des variables, maximise la somme des coefficients de corrélation au carré. Elle maximise ainsi l’inertie du jeu de données. 
 
 Nous cherchons la dimension qui maximise le coefficient de corrélation au carré entre les variables : la 1ère composante principale. La somme des r² est l’inertie des nuages des points. 
+
 Nous prenons une matrice X quantitative que l’on dédouble, puis on juxtapose ces deux matrices. Nous faisons l’AFM sur ces deux matrices : les deux groupes sont superposés, avec une coordonnée de 1 sur la 1ère dimension et une coordonnée de x sur la 2ème dimension. 
+
 Faire l’AFM sur la juxtaposition de deux matrices revient à faire une ACP sur la matrice. Une ACP est normée par défaut : on met le même poids à toutes les dimensions. 
+Deux stimulis sont d'autant plus proches qu'ils ont été mis ensemble un grand nombre de fois. Pour des variables qualitatives, l'ACM est une méthode trop grossière 
 
-
-
-Deux stimulis sont d'autant plus proches qu'ils ont été mis ensemble un grand nombre de fois
-Pour des variables qualitatives, l'ACM est une méthode trop grossière 
-Il y a moins d'individus que de partitions puisqu'un individu = plusieurs partitions emboités
-Il faut prendre en compte l'emboitement et le fait que les points de vues soient équilibrés du point de vue de l'individu. Pour cela AFM : chaque tableau de données = partitions associées à un individu. 
-
+Il y a moins d'individus que de partitions puisqu'un individu = plusieurs partitions emboités. Il faut prendre en compte l'emboitement et le fait que les points de vues soient équilibrés du point de vue de l'individu. Pour cela AFM : chaque tableau de données = partitions associées à un individu. 
 
 ```{r}
 trih <- read.delim("trih.txt", row.names=1)
@@ -198,11 +210,10 @@ res <- MFA(trih, group = nb_herarchie, type=rep("n",170), graph = FALSE)
 res$group
 ```
 
-Pour représenter ces hiérarchies dans un espace, il faut rajouter H1, H2, H3 comme des groupes supplémentaires.
-Dans ces cas, l'ordinateur calcule la mesure de liaisons LG.
+Pour représenter ces hiérarchies dans un espace, il faut rajouter H1, H2, H3 comme des groupes supplémentaires. Dans ces cas, l'ordinateur calcule la mesure de liaisons LG.
 
-Exemple : AFM sur 10 individus -> 10 blocs 
-1 er bloc -> dédoubler avec autant de groupes que de hiérarchies 
+Exemple : AFM sur 10 individus -> 10 blocs . 1 er bloc -> dédoubler avec autant de groupes que de hiérarchies 
+
 Dans ce cas, H1 et H2 sont deux groupes supplémentaires
 
 -> Nous ajoutons les 2 partitions du 1er juge à nos données
@@ -237,7 +248,7 @@ On va essayer lors de l'analyse de maximiser la somme des coefficients de corré
 
 #Interprétation du graph des variables
 
-####HCPC
+#### HCPC
 
 ```{r}
 res.hcpc <- HCPC(res.mca)
@@ -261,31 +272,34 @@ res.hcpc$desc.var$category
 
 Le tri aggloméré est un tri avec caractérisation des groupes, on peut par exemple prendre en compte les étapes liées au tri, on ajoute une dimension temporelle.
 
-Il existe 2 stratégies pour prendre en compte les étapes : la stratégie agglomérative ou divisible 
-- La stratégie agglomérative consiste à regrouper au fur et à mesure les groupes jusqu'à atteindre 1 seul groupe contenant tous les produits
-- La stratégie divisible part d'un groupe rassemblant la totalité des produits pour ensuite les répartir en sous groupes.
+Il existe 2 stratégies pour prendre en compte les étapes : la stratégie agglomérative ou divisible.
+
+ - La stratégie agglomérative consiste à regrouper au fur et à mesure les groupes jusqu'à atteindre 1 seul groupe contenant tous les produits
+ - La stratégie divisible part d'un groupe rassemblant la totalité des produits pour ensuite les répartir en sous groupes
 
 Ces données ont alors une certaine structure : 1 bloc correspond à un consommateur (1 bloc est constitué d'autant de colonnes que le consommateur donne de parition). 
 
 L'AFM permet de représenter les groupe de variables liées au consommateur. La structure en groupe de l'AFM permet d'obtenir 2 informations :
 
-- Un nouvel objet : a représentation des groupes de variables (calcul de coordonnées) 
-- La mesure de liaison LG 
+ - Un nouvel objet : a représentation des groupes de variables (calcul de coordonnées) 
+ - La mesure de liaison LG 
 
-**Aides à l'interprésation de l'AFM :** 
-- La liaison LG correspond à la liaison entre un groupe de variable et une dimension. Cette liaison permet d'exprimer la structure sur les individus. Elle correspond à la somme sur variables des coefficients de corrélation au carré. 
+**Aides à l'interprésation de l'AFM :**
 
--  Le cœur de l’AFM repose sur une analyse factorielle (ACP dans le cas de variables quantitatives, ACM dans le cas de variables qualitatives). Ainsi, la première composante principale est obtenue en maximisant la somme du carré des écarts entre les variables du jeu de donnée et la dimension. Cette somme de carré d'écarts des variables est pondérée par l'inertie de la dimension. Ainsi, si la somme des carrés des écarts des variables et de la dimension est égale à l'inertie de cette dimension, alors la coordonnée du groupe vaut 1. De ce fait, les coordonnées des groupes sont toujours comprises entre 0 et 1. 
-- Si la coordonnée du groupe est élevée sur une dimention, il existe une structure de variabilité forte pour ce groupe. 
-- Les dimensions structurantes soulignent un point commun entre les groupes.
+ - La liaison LG correspond à la liaison entre un groupe de variable et une dimension. Cette liaison permet d'exprimer la structure sur les individus. Elle correspond à la somme sur variables des coefficients de corrélation au carré
+ -  Le cœur de l’AFM repose sur une analyse factorielle (ACP dans le cas de variables quantitatives, ACM dans le cas de variables qualitatives). Ainsi, la première composante principale est obtenue en maximisant la somme du carré des écarts entre les variables du jeu de donnée et la dimension. Cette somme de carré d'écarts des variables est pondérée par l'inertie de la dimension. Ainsi, si la somme des carrés des écarts des variables et de la dimension est égale à l'inertie de cette dimension, alors la coordonnée du groupe vaut 1. De ce fait, les coordonnées des groupes sont toujours comprises entre 0 et 1
+ - Si la coordonnée du groupe est élevée sur une dimention, il existe une structure de variabilité forte pour ce groupe
+ - Les dimensions structurantes soulignent un point commun entre les groupes
 
-Remarque : 
-Il est possible à l'aide d'une AFMH de prendre en compte une suite de partition emboitées, et par exemple prendre en comptre le processus congnitif du consommateur.
+_Remarque_ : Il est possible à l'aide d'une AFMH de prendre en compte une suite de partition emboitées, et par exemple prendre en comptre le processus congnitif du consommateur.
 
 **Cas du tri agglomératif séquencé :**
+
 Dans l'analyse sensorielle, on peut distinguer 2 démarches :
-- Lorque l'on a peu de produits, la démarche est orientée vers du prototypage, on cherche à comprendre l'espace produit. 
-- Lorsque l'on a beaucoup de produits, on cherche à étudier le consommateur, à faire une étude de marché
+
+ - Lorque l'on a peu de produits, la démarche est orientée vers du prototypage, on cherche à comprendre l'espace produit
+ - Lorsque l'on a beaucoup de produits, on cherche à étudier le consommateur, à faire une étude de marché
+
 Dans ce dernier cas, on peut utiliser une méthode de tri agglomératif séquencé. Cela consiste à réaliser plusieurs séances de tri. 
 
 
