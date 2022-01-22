@@ -169,9 +169,7 @@ coefficients(mod1)
 summary(mod1)
 ```
 
-Plus l'âge est élevé et plus la complexité est élevée. Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminuent : l'éducation "standardise" les points de vue.
-
-Il faut caractériser les groupes.
+Plus l'âge est élevé et plus la complexité est élevée. Les modalités age sont ordonnées sur la première dimension. Les distances relatives entre les ages diminuent quand l'age augmente : plus les enfants grandissent et plus les différences de perception diminuent : l'éducation "standardise" les points de vue. Il faut caractériser les groupes.
 
 On peut aussi réaliser un test de comparaison par paire sur notre résultat d'ACP en ne prenant que les résultats de la 1ère dimension. Dans le résultats qui suit, on teste 2 à 2 les différents âges pour faire ressortir une éventuelle différence dû à l'age de l'enfant.
 
