@@ -7,6 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(FactoMineR)
 library(SensoMineR)
+library(factoextra)
 ```
 
 #### Introduction aux données de perception
@@ -150,10 +151,10 @@ new_data <-Descriptive[,c(4:7, 9, 11)]
 On réalise ensuite l'ACP sur les variables séléctionnées. On peut ensuite faire apparaitre les coordonnées des individus sur les dimensions de cette ACP.
 
 ```{r}
-res.acm <- PCA (new_data, quali.sup = 6 )
-plot.PCA(res.acm, choix = c("ind"), invisible = c("ind"), graph.type = c("classic"))
+res.pca <- PCA (new_data, quali.sup = 6 )
+plot.PCA(res.pca, choix = c("ind"), invisible = c("ind"), graph.type = c("classic"))
 
-res <- cbind(res.acm$ind$coord, new_data)
+res <- cbind(res.pca$ind$coord, new_data)
 summary(res)
 ```
 
@@ -205,7 +206,6 @@ for (i in 1: 429){
   trih[,i]<- as.factor(trih[,i])
 }
 res <- MFA(trih, group = nb_herarchie, type=rep("n",170), graph = FALSE)
-res$group
 ```
 
 Pour représenter ces hiérarchies dans un espace, il faut rajouter H1, H2, H3 comme des groupes supplémentaires. Dans ces cas, l'ordinateur calcule la mesure de liaisons LG.
@@ -223,7 +223,6 @@ group = c(nb_hierarchie2, rep(1,2))
 res2 <- MFA(trih2, group = group, type=rep("n",12), graph = FALSE, num.group.sup = c(11,12))
 plot.MFA(res2, choix = "group")
 res.fahst<-fahst(trih2,group=group)
-res2$ind
 ```
 
 -> Nous ajoutons les 3 partitions du 2ème juge à nos données 
@@ -231,10 +230,9 @@ res2$ind
 ```{r}
 trih3 <- cbind(trih[,1:26],trih[,3:5])
 nb_hierarchie2 <- Descriptive[1:10,]$Nbdehiérarchies
-group = c(nb_hierarchie2, 3)
+group = c(nb_hierarchie2, rep(1,3))
 res3 <- MFA(trih3, group = group, type=rep("n",13), graph = FALSE, num.group.sup = c(11,12,13))
 plot.MFA(res3, choix = "group")
-
 res.fahst<-fahst(trih3,group=group)
 ```
 
@@ -249,7 +247,7 @@ On va essayer lors de l'analyse de maximiser la somme des coefficients de corré
 #### HCPC
 
 ```{r}
-res.hcpc <- HCPC(res.mca)
+res.hcpc <- HCPC(res.pca,nb.clust=-1)
 
 fviz_cluster(res.hcpc,
              repel = TRUE,            
@@ -299,15 +297,6 @@ Dans l'analyse sensorielle, on peut distinguer 2 démarches :
  - Lorsque l'on a beaucoup de produits, on cherche à étudier le consommateur, à faire une étude de marché
 
 Dans ce dernier cas, on peut utiliser une méthode de tri agglomératif séquencé. Cela consiste à réaliser plusieurs séances de tri. 
-
-
-
-
-
-
-
-
-
 
 
 
